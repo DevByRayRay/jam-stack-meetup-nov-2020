@@ -21,6 +21,9 @@ export default {
         h2: {
             fontSize: '3rem',
             textTransform: 'uppercase',
+        },
+        a: {
+            color: '#2AFFDF'
         }
     }
 }
