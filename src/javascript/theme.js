@@ -31,9 +31,7 @@ export default {
             fontStyle: 'italic',
             maxWidth: '50vw',
         },
-        Slide: {
-            maxWidth: '60vw',
-            margin: '0 auto'
+        Header: {
         }
     }
 }

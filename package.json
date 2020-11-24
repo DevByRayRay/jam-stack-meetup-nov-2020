@@ -15,6 +15,7 @@
     "mdx-deck": "^4.1.1"
   },
   "dependencies": {
+    "mdx-deck-theme-awesomeness": "^1.2.6",
     "styled-components": "^5.2.1"
   },
   "resolutions": {

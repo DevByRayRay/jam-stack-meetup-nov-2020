@@ -9,6 +9,9 @@
     --pink: #FB94FF;
     --light_blue: #9EFFFF;
 }
+body {
+    font-size: 90%;
+}
 
 p code {
     color: black;
@@ -17,7 +20,7 @@ p code {
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
     text-align: left;
     line-height: 1.5;
-    padding: 2rem;
+    padding: 1rem;
     tab-size: 4;
     display: block;
 }
