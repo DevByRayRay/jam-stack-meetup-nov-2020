@@ -7,6 +7,8 @@ export default {
         text: 'white',
         background: '#193549',
         primary: 'white',
+        progressBarBackground: '#15232D',
+        progress: ' #2AFFDF'
     },
     styles: {
         h1: {
@@ -24,6 +26,14 @@ export default {
         },
         a: {
             color: '#2AFFDF'
+        },
+        blockquote: {
+            fontStyle: 'italic',
+            maxWidth: '50vw',
+        },
+        Slide: {
+            maxWidth: '60vw',
+            margin: '0 auto'
         }
     }
 }

@@ -1,9 +1,22 @@
 import gatsbyLogo from './static/gatsby-logo.png';
 import Layout from './src/javascript/Layout'
 import { Grid4, Grid1 } from './src/javascript/grid-4'
+import { ProgressBar } from './src/javascript/ProgressBar'
 import customTheme from './src/javascript/theme'
+import { themes } from 'mdx-deck'
 
-export const theme = customTheme
+export const theme = {
+  ...customTheme,
+  ...themes.prism
+}
+export const autoTransition = 5
+
+<Footer>
+
+<ProgressBar />
+
+</Footer>
+
 
 # JAM Stack Meetup
 ## November 2020 
@@ -59,7 +72,6 @@ export const theme = customTheme
 3. Netlify CMS
 4. Netlify Serverless Functions
 4. Betalingen
-5. Tools
 
 ---
 
@@ -73,6 +85,14 @@ export const theme = customTheme
 
 ---
 
+# Fun facts
+## Presentatie
+
+- Deze slide deck is gemaakt met Gatsby [(mdx-deck](https://github.com/jxnblk/mdx-deck))
+
+
+---
+
 # Gatsby
 ## Waar gebruik je het voor?
 
@@ -82,6 +102,18 @@ export const theme = customTheme
 - Wiki Websites
 - Documentatie Websites
 - Blogs
+
+---
+
+# Gatsby
+## Hoe werkt het?
+
+1. Gatsby heeft een content bron nodig: Markdown files, JSON, CMS, Headless CMS etc.
+2. Gatsby maakt op basis van GraphQL een Data Layer om de data tijdens het bouw process op te halen.
+3. Tijdens het bouwen word een GraphQL server opgezet voor alle opgehaalde data.
+4. Na het ophalen smelt Gatsby de content en React componenten samen tot een website.
+5. De gebruiker kan daardoor supersnel de website op zijn scherm krijgen.
+
 
 ---
 
@@ -203,7 +235,6 @@ import bitcoin from './static/bitcoin-website.png';
 import stateOfJs from './static/state-of-js-website.png';
 import airbnb from './static/airbnb-engineering-data-science-website.png';
 
-
 # Gatsby
 ## Waar wordt het gebruikt?
 
@@ -255,57 +286,63 @@ import airbnb from './static/airbnb-engineering-data-science-website.png';
 ---
 
 # Gatsby
-## 3. Begin met Gatsby
+## Wat heb je nodig?
 
-
----
-
-### 3.1 Wat heb je nodig?
-
-<Steps>
 
 1. Git
 2. NodeJS
 
-</Steps>
+---
+
+# Gatsby
+## Installatie
+
+
+```
+$ npm install gatsby-cli -g
+```
 
 ---
 
-### 3.2 Installatie
+# Gatsby
+## Test installatie
 
-`$ npm install gatsby-cli -g`
-
----
-
-### 3.3 Test installatie
-
-`$ gatsby --help`
-
----
-
-### 3.4 Nieuw Gatsby project
-
-`$ gatsby new hello-world gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world`
-
----
-
-### 3.5 Start project
-
-`$ cd hello-world`
-
-`$ gatsby develop`
-
----
-
-
-### 3.6 Open browser
-
-Open [http://localhost:8000](http://localhost:8000)
+```
+$ gatsby --help
+```
 
 
 ---
 
-### 3.7 Recap
+# Gatsby
+## Nieuw project
+
+`$ gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world`
+
+
+---
+
+# Gatsby
+## Start nieuw project
+
+```
+$ cd hello-world
+$ gatsby develop
+```
+
+---
+
+
+# Gatsby
+## Open nieuw project
+
+Open [http://localhost:8000](http://localhost:8000) of [http://localhost:8000/__graphql](http://localhost:8000/__graphql)
+
+
+---
+
+# Gatsby
+## Recap
 
 import v from './static/gatsby-create-site.mp4';
 
@@ -319,14 +356,224 @@ _ Source: [Gatsby Docs](https://www.gatsbyjs.com/tutorial/part-zero/) _
 
 ---
 
-# Netlify
+## Netlify
+
+import netlify from './static/netlify-website.png';
+
+<img async="on" src={netlify} style={{
+      width: '80vw',
+      height: 'auto',
+    }} />
+
+
 
 --- 
 
+# Netlify
+## Wat kan je er mee?
 
-### 1. Wat is Netlify?
+- Webhost voor JAMstack Websites
+- Automatisch bouwen en deployen d.m.v. Git
+- Ingebouwde CDN waardoor alles supersnel Laad
+- Eigen domeinnaam
+- HTTPS
+- Deploy previews
+- Deployments terugdraaien
+
+--- 
+
+# Netlify
+## Wanneer gebruik je Netlify
+
+- Persoonlijke websites (portfolio, blogs etc.)
+- Opensource projecten (documenatie, website, tutorials)
+- Bedrijfs websites
+- E-commerce websites
+
+--- 
+
+# Netlify
+## Gatsby project deployen
+
+---
+
+# Netlify
+## 1. Plaats project op Git
+
+import github from './static/gatsby-starter.png';
+
+<img async="on" src={github} style={{
+      width: '80vw',
+      height: 'auto',
+    }} />
 
 
 ---
 
-### 2. Waar gebruik je Netlify voor?
+# Netlify
+## 2. Login of maak account bij Netlify
+
+---
+
+# Netlify
+## 3. Koppel Git account met Netlify
+
+---
+
+# Netlify
+## 4. Voeg repo toe aan Netlify
+
+import repoList from './static/netlify-repo-list.png';
+
+<img async="on" src={repoList} style={{
+      width: '40vw',
+      height: 'auto',
+    }} />
+
+--- 
+
+# Netlify
+## 5. Vul gegevens in
+
+import siteSettings from './static/netlify-site-settings.png';
+
+<img async="on" src={siteSettings} style={{
+      width: '40vw',
+      height: 'auto',
+    }} />
+
+
+--- 
+
+# Netlify
+## 6. Site overzicht
+
+import siteOverview from './static/netlify-site-overview.png';
+
+<img async="on" src={siteOverview} style={{
+      width: '80vw',
+      height: 'auto',
+    }} />
+
+
+--- 
+
+# Netlify
+## 7. Wacht op deployment
+
+import netlifyDeploy from './static/netlify-deploy-build.png';
+
+<img async="on" src={netlifyDeploy} style={{
+      width: '80vw',
+      height: 'auto',
+    }} />
+
+--- 
+
+# Netlify
+## 8. Bekijk website
+
+import netlifyPreview from './static/netlify-live-website.png';
+
+<img async="on" src={netlifyPreview} style={{
+      width: '80vw',
+      height: 'auto',
+    }} />
+
+--- 
+
+# Gatsby
+## Content bronnen
+
+- [Markdown bestanden](https://www.gatsbyjs.com/docs/adding-markdown-pages/)
+- [Databases](https://www.gatsbyjs.com/docs/sourcing-from-databases/)
+- [Services](https://www.gatsbyjs.com/docs/sourcing-from-hosted-services/)
+- [CMS en Headless CMS](https://www.gatsbyjs.com/docs/headless-cms/)
+- [JSON en YAML](https://www.gatsbyjs.com/docs/sourcing-content-from-json-or-yaml/)
+
+--- 
+
+# Gatsby
+## Starter projecten
+
+- [Netlify CMS](https://www.gatsbyjs.com/starters/netlify-templates/gatsby-starter-netlify-cms)
+- [Blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog)
+- [WordPress](https://www.gatsbyjs.com/starters/GatsbyCentral/gatsby-starter-wordpress)
+- [Nog veel meer](https://www.gatsbyjs.com/starters)
+
+
+--- 
+
+# Netlify CMS
+## Wat is het?
+
+import netlifyCms from './static/netlify-cms.png';
+
+<img async="on" src={netlifyCms} style={{
+      width: '80vw',
+      height: 'auto',
+    }} />
+
+[Netlify CMS](https://www.netlifycms.org/)
+
+
+--- 
+
+# Netlify CMS
+## Hoe werkt het?
+
+https://youtu.be/p6h-rYSVX90?t=92
+
+---
+
+# Netlify Functions
+## Serverless function
+
+import netlifyFunctions from './static/netlify-serverless-functions.png';
+
+<img async="on" src={netlifyFunctions} style={{
+      width: '80vw',
+      height: 'auto',
+    }} />
+
+
+---
+
+# Netlify Functions
+## Wat is het?
+
+Serverless functions zijn JavaScript bestanden waarin je dingen kunt berekenen of externe API's kunt aanroepen. 
+
+Zonder dat je hiervoor een backend server hoeft te maken.
+
+---
+
+# Netlify Functions
+## Hoe ziet het er uit?
+
+Het kan zo simpel zijn als dit:
+
+```
+exports.handler = async (event, context) => {
+  return {
+   statusCode: 200,
+   body: JSON.stringify({
+    message: 'Hello world"
+   }),
+  }
+}
+```
+
+---
+
+# Gatsby
+## Betalingen
+
+- [Stripe API](https://www.gatsbyjs.com/tutorial/ecommerce-tutorial/)
+- [Snipcart](https://www.gatsbyjs.com/plugins/gatsby-plugin-snipcart-advanced/)
+
+
+
+
+
+
