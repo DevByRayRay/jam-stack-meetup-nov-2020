@@ -5,18 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx"
+    "start": "npx mdx-deck deck.mdx",
+    "build": "npx mdx-deck build deck.mdx"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint-plugin-mdx": "^1.8.2",
     "mdx-deck": "^4.1.1"
   },
   "dependencies": {
-    "mdx-deck-theme-awesomeness": "^1.2.6",
-    "styled-components": "^5.2.1"
+    "@emotion/react": "^11.1.1",
+    "@emotion/styled": "^11.0.0",
+    "styled-components": "^5.2.1",
+    "theme-ui": "^0.3.4"
   },
   "resolutions": {
     "styled-components": "^5"
